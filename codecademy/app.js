@@ -13,7 +13,7 @@ function handleFailure(onRejected) {
   console.log(onRejected);
 }
 
-//using then to handle success and faliure 
+//using then to handle success and faliure
 checkInventory(order).then(handleSuccess, handleFailure);
 
 ///using catch to handle failure on our settled promises
