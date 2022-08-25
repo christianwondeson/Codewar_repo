@@ -13,6 +13,26 @@ function myExecutor(resolve, reject) {
   }
 }
 
+function myPantsExe(resolve, reject) {
+  switch (inventory.pants) {
+    case 1088:
+      resolve("adequate pants are avaliable");
+      break;
+    case 1000:
+      reject("insufficent pants");
+      break;
+    case Default:
+      console.log("no working");
+      break;
+  }
+}
+function orderPants() {
+  return new Promise(myPantsExe);
+}
+
+const resultPants = orderPants();
+console.log(resultPants);
+
 function orderSunglasses() {
   return new Promise(myExecutor);
 }
