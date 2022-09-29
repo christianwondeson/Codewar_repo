@@ -1,0 +1,3 @@
+i am writing on a newly create txt file !!
+
+ i am trying to append a new line on the same file by using fspromises and async func
