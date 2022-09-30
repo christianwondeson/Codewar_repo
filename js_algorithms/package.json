@@ -1,0 +1,15 @@
+{
+  "name": "js_algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "IntroAlgorithm.js",
+  "scripts": {
+    "start": "node IntroAlgorithm",
+    "dev": "nodemon IntroAlgorithm"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
