@@ -1,5 +1,3 @@
-const { resolve } = require("path");
-
 let start = 0;
 let end = 0;
 
@@ -46,5 +44,23 @@ let TG = Td - Ts;
 
 console.log(TG);
 
-// in the second example the code that constant behaviour the time complexity will not change even if the enter number is larger or smaller O(1)
+// in the second example the code that constant behaviour the time complexity will not change  even if the enter number is larger or smaller O(1)
 
+// function sumNumbers(numbers) {
+//   let result = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     result = numbers[i] + result;
+//   }
+//   return result;
+// }
+// let sum = sumNumbers([1, 3, 10, 12]);
+// console.log(sum);
+
+// the time complexity for this code the general trend is O(n)
+
+function sumNumbers(numbers) {
+  return numbers.reduce((sum, currentNum) => sum + currentNum, 0);
+}
+
+console.log(sumNumbers([1, 3, 10]));
+// reduce do the same us the above linear code
