@@ -24,4 +24,10 @@ const logEvents = async (message) => {
     console.error(err);
   }
 };
+
+process.on("uncaughtException", (err) => {
+  console.error(`there are some errors ${err}`);
+  process.exit();
+});
+
 module.exports = logEvents;
