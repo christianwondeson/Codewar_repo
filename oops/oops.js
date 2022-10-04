@@ -63,8 +63,40 @@ const studentOne = new student(
   "natural Science",
   "bashwam academy"
 );
+// when object is created we will use the new keyword
 
 student.school();
 studentOne.naming();
 
+console.log(
+  "is studentOne is instacnce of student class " +
+    (studentOne instanceof student)
+);
 // this may reduce the code redundency but there are some short comings
+
+// class inheritance
+
+class media {
+  constructor(info) {
+    this.publishDate = info.publishDate;
+    this.name = info.name;
+  }
+}
+
+// let us create a child class
+class song extends media {
+  constructor(songData) {
+    super(songData);
+    this.artist = songData.artist;
+    this.production = songData.production;
+  }
+}
+// we used the super keyword to inherit from the parent class
+const mySong = new song({
+  artist: "queen",
+  name: "Bohemain Rhapsody",
+  publishDate: 1975,
+  production: "7 star",
+});
+
+console.log(mySong.production);
