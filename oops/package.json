@@ -2,11 +2,10 @@
   "name": "oops",
   "version": "1.0.0",
   "description": "",
-  "main": "oops.js",
+  "main": "objectCreate.js",
   "scripts": {
-    "start":"node codecademy",
-    "dev":"nodemon codecademy"
-
+    "start": "node objectCreate",
+    "dev": "nodemon objectCreate"
   },
   "author": "",
   "license": "ISC",

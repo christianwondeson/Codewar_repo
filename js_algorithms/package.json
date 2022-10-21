@@ -4,12 +4,13 @@
   "description": "",
   "main": "IntroAlgorithm.js",
   "scripts": {
-    "start": "node IntroAlgorithm",
-    "dev": "nodemon IntroAlgorithm"
+    "start": "node stack",
+    "dev": "nodemon stack"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
   }
 }

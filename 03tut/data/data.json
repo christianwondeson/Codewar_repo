@@ -1,6 +1,11 @@
-[
-    {
-        "fname":"chris",
-        "lname":"wondeson"
-    }
-]
+{
+  "fname": "chris",
+  "lname": "wondeson",
+  "location": {
+    "addis abeba": "one",
+    "mekele": "one",
+    "baher dar": "one",
+    "dire dawa": "one",
+    "jema": "one"
+  }
+}

@@ -8,7 +8,7 @@ var customer = {
     city: "ADDIS ABABA",
     state: "ADDIS ABEBA",
   },
-};
+}; 
 // this obj with some attributes , with speak method bind to it
 
 function person(name, street) {
@@ -97,6 +97,6 @@ const mySong = new song({
   name: "Bohemain Rhapsody",
   publishDate: 1975,
   production: "7 star",
-});
+ });
 
 console.log(mySong.production);

@@ -2,7 +2,7 @@ class Department {
   constructor(dep) {
     this.dep = dep;
     console.log("i am dep constructor");
-  }
+   }
 
   getDep() {
     return this.dep;

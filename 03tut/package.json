@@ -2,15 +2,16 @@
   "name": "03tut",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "Server_Express.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start": "node Server_Express",
+    "dev": "nodemon Server_Express"
   },
-  "author": "",
+  "author": "christian wondeson from dave gray tutorial",
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.29.3",
+    "express": "^4.18.2",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

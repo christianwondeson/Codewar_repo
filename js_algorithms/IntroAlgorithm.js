@@ -12,11 +12,11 @@ function sumUp(n) {
 
 start = performance.now();
 // console.log(start);
-sumUp(1);
+sumUp(1000000);
 end = performance.now();
 
 let timing = end - start;
-console.log(timing);
+console.log("the time it took to execute to completion is :" + timing);
 
 // the time it take to run a larger number is linear with the number digit
 // this means when we increase the number "n" which is given as a parameter we increase the computation time
@@ -28,7 +28,7 @@ console.log(
   "other solution that take constant time whether the input number is larger or smaller"
 );
 
-function sumUp_1(n) {
+function sumUpOne(n) {
   return (n / 2) * (n + 1);
 }
 
@@ -37,7 +37,7 @@ let Td = 0;
 
 Ts = performance.now();
 // console.log(Ts);
-sumUp_1(100);
+sumUpOne(10000);
 Td = performance.now();
 
 let TG = Td - Ts;
@@ -63,4 +63,39 @@ function sumNumbers(numbers) {
 }
 
 console.log(sumNumbers([1, 3, 10]));
-// reduce do the same us the above linear code
+// reduce do the same us the above linear code it doesn't solve the time compleity to a better trend
+
+class student {
+  constructor(name, id) {
+    this.name = name;
+    this.id = id;
+  }
+  studentName(name) {
+    let names = [];
+    for (let i = 0; i < name.length; i++) {
+      console.log(name[i]);
+      names = name[i];
+    }
+    // we are iterating linear so the time compleity is o(n)
+    //return names;
+  }
+  studentId(id) {
+    let ids = [];
+    for (let i = 0; i < id.length; i++) {
+      console.log(id[i]);
+      ids = id[i];
+    }
+  }
+}
+
+let studentOne = new student(["chris", "brad", "pitt"], [1, 2, 3, 4]);
+
+console.log(studentOne.id[3]);
+studentOne.studentName(["chris", "brad", "pitt"]);
+studentOne.studentId([1, 2, 3, 4, 5]);
+
+// this oops will  take a time compleity of 0(n + m) because the fisrt loop go through number data type and the second loop goes through a string data type
+
+console.log(
+  "the above class will create a class student that has a method of studentname, studentid with a construct to initalize the name and the id initally and the studentOne instance which is create up on the student class will inherit the variables and methods!"
+);
