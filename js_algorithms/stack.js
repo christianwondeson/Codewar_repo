@@ -14,7 +14,8 @@ var Stack = function () {
       return undefined;
     }
     this.counter--;
-    let result = this.Storage[this.counter];
+    let r
+    lt = this.Storage[this.counter];
     delete this.Storage[this.counter];
     return result;
   };

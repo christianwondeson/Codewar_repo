@@ -2,10 +2,10 @@
   "name": "js_algorithms",
   "version": "1.0.0",
   "description": "",
-  "main": "IntroAlgorithm.js",
+  "main": "queue.js",
   "scripts": {
-    "start": "node stack",
-    "dev": "nodemon stack"
+    "start": "node queue",
+    "dev": "nodemon queue"
   },
   "author": "",
   "license": "ISC",
