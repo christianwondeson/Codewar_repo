@@ -3,11 +3,27 @@ const { TIMEOUT } = require("dns");
 const express = require("express");
 const app = express();
 const path = require("path");
+const {logger} = require("./middleware/loginEvent");
 const { nextTick } = require("process");
 const PORT = process.env.PORT || 3500;
 
 // express js check the rooting of the page automatically for example inorder to check for the index page we must consider the / or /index.html condition to disply the the same result ^ represent the beginning and $ the end is a slash or index.html respond the index.html
 // in order to only req the index with out the content type we use (.html)? for that purpose
+// this will word like a water fllow from top to bottom
+
+// lets us custom middleware in built-in middleware next is handled automatically
+
+app.use(logger);
+
+// this are middleware that are bulit in for form data or Json files
+
+app.use(express.urlencoded({ extended: false }));
+
+app.use(express.json());
+// basic we are using the static css files with built-in middlewares
+
+app.use(express.static(path.join(__dirname, "/public")));
+// it serves static file like the css we use
 
 // express handle the root in water fall fashion
 
@@ -65,6 +81,5 @@ const three = (req, res) => {
 app.get("/chain(.html)?", [one, two, three]);
 
 app.listen(PORT, () => console.log(`server running ${PORT}`));
-
 
 // route handlers are the same us middlewares

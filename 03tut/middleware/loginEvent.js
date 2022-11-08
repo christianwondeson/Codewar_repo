@@ -12,10 +12,13 @@ const logEvents = async (message, logName) => {
   console.log(logItem);
 
   try {
-    if (!fs.existsSync(path.join(__dirname, "logs"))) {
-      await fsPromise.mkdir(path.join(__dirname, "logs"));
+    if (!fs.existsSync(path.join(__dirname, "..", "logs"))) {
+      await fsPromise.mkdir(path.join(__dirname, "..", "logs"));
     }
-    await fsPromise.appendFile(path.join(__dirname, "logs", logName), logItem);
+    await fsPromise.appendFile(
+      path.join(__dirname, "..", "logs", logName),
+      logItem
+    );
     // await fsPromise.unlink(path.join(__dirname, "logs", logName));
     // await fsPromise.appendFile(
     //   path.join(__dirname, "logs", "eventing.txt"),
@@ -26,9 +29,15 @@ const logEvents = async (message, logName) => {
   }
 };
 
+const logger = (req, res, next) => {
+  logEvents(`${req.method}\t${req.header.origin}\t${req.url}`, "reqLog.txt");
+  console.log(`${req.method} ${req.path}`);
+  next();
+};
+
 process.on("uncaughtException", (err) => {
   console.error(`there are some errors ${err}`);
   process.exit();
 });
 
-module.exports = logEvents;
+module.exports = { logger, logEvents };
