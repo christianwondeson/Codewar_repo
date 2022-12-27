@@ -100,3 +100,7 @@ const mySong = new song({
  });
 
 console.log(mySong.production);
+
+
+console.log(number);
+number = 6;

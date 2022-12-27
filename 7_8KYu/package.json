@@ -1,0 +1,15 @@
+{
+  "name": "7_8kyu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Beginner_Series_Clock.js",
+  "scripts": {
+    "start":"node learnPromises.js",
+    "dev":"nodemon learnPromises.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
