@@ -85,3 +85,6 @@ console.log(name, age, skills)
 console.log(name.padStart().length);
 console.log(skills.padEnd().charCodeAt(2));
 // this will return unicode of the character
+
+
+// class

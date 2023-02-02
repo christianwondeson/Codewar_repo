@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsdoc": "github:jsdoc/jsdoc",
     "nodemon": "^2.0.20"
   },
   "type": "module"
 }
-
