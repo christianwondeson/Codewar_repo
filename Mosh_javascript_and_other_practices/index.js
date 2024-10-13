@@ -80,8 +80,117 @@ function fizzBuzz(input) {
 console.log(fizzBuzz(false));
 
 
-// net challenge 
 
+// net challenge 
+// function checkSpeed(speed){
+//     let point = 0;
+//     const SPEEDLIMIT = 70
+// if (speed < SPEEDLIMIT){
+//     return "ok";
+// }else if(speed >= 75){
+//    while(speed >= 75){
+//     if(speed >= 75){
+//         point +=1;
+//     }
+//     speed = speed -5;
+//    }
+// }
+// return point < 12 ? `point : ${point} ` : 'Suspended License';
+// }
+
+
+// let result = checkSpeed(130);
+// console.log(result);
+
+// avoid using magic numbers for speed
+// redundant code 
+// unneccessary return statements and loops
+
+
+function checkSpeedImproved(speed) {
+    const SPEEDLIMTT = 70;
+    const KMPERPOINT = 5;
+    let point = 0;
+
+    if (speed < (SPEEDLIMTT + KMPERPOINT)) {
+        console.log('ok');
+    } else {
+        point = Math.floor((speed - SPEEDLIMTT) / KMPERPOINT);
+    }
+    return point >= 12 ? "License suspended" : `points: ${point}`;
+}
+//remove magic numbers 
+console.log(checkSpeedImproved(180));
+
+
+// display even and odd number
+function showNumbers(limit) {
+    let zero = 0;
+    while (zero <= limit) {
+        if (zero % 2 == 0) {
+            console.log(`${zero} EVEN`);
+        } else {
+            console.log(`${zero} ODD`);
+        }
+        zero++;
+    }
+}
+showNumbers(10);
+
+// count truthy 
+const list = [1, 2, 0, false, undefined];
+function countTruthy(input) {
+    let counter = 0;
+    for (value of input) {
+        value ? counter++ : value;
+    }
+    return counter;
+}
+
+console.log(countTruthy(list));
+
+// display ky value pair of object entities that are string
+const movies = {
+    title: 't',
+    releaseYear: 2024,
+    rating: 8.5,
+    director: 'zack snyder'
+}
+function showProperties(obj) {
+    for (entity in obj) {
+        console.log((typeof obj[entity]) === 'string' ? `${entity} : ${obj[`${entity}`]}` : 'it must be data tye other than string');
+    }
+    return 'finished for this function';
+}
+
+console.log(showProperties(movies));
+
+// identify multiple of 3 and 5 , plus add them
+function sum(limit) {
+    let sum = 0;
+    let checker = 1;
+    while (checker <= limit) {
+        if (checker % 3 === 0 || checker % 5 === 0) {
+            sum += checker;
+        }
+        checker++
+    }
+    return sum;
+}
+console.log(sum(10));
+
+// grade calculator
+const marks = [80, 90, 90]
+function calculateGrade(marks){
+    let average = 0;
+    let sum = 0;
+    for (mark of marks){
+        sum += mark;
+    }
+    average = sum / marks.length;
+    return average <= 100 && average >= 90 ? "A" : average <= 89 && average >= 80 ? "B" : average <= 79 && average >= 70  ? "C" : average <= 69 && average >= 60 ? "D" : "F";
+}
+console.log(calculateGrade(marks));
 
 
 
