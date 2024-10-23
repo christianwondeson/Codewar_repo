@@ -1,3 +1,3 @@
 **Javascript**
-__ Learning with simple to advanced challenge__
+Learning with simple to advanced
 ## you will find practice challenges in this repo##
