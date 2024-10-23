@@ -181,17 +181,46 @@ console.log(sum(10));
 
 // grade calculator
 const marks = [80, 90, 90]
-function calculateGrade(marks){
+function calculateGrade(marks) {
     let average = 0;
     let sum = 0;
-    for (mark of marks){
+    for (mark of marks) {
         sum += mark;
     }
     average = sum / marks.length;
-    return average <= 100 && average >= 90 ? "A" : average <= 89 && average >= 80 ? "B" : average <= 79 && average >= 70  ? "C" : average <= 69 && average >= 60 ? "D" : "F";
+    return average <= 100 && average >= 90 ? "A" : average <= 89 && average >= 80 ? "B" : average <= 79 && average >= 70 ? "C" : average <= 69 && average >= 60 ? "D" : "F";
 }
 console.log(calculateGrade(marks));
 
+function showStars(rows) {
+    let star = "";
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+            star += '*';
+        }
+        console.log(star);
+        star = "";
+    }
+}
 
+//showStars(10)
 
+function showPrimes(limit) {
+    for (let num = 2; num <= limit; num++) {
+        //console.log(num);
+        let isPrime = true;
+        for (let j = 2; j < num; j++) {
+            if (num % j === 0) {
+                //console.log(num, j);
+                isPrime = false;
+                break;
+            }
+        }
 
+        if (isPrime) {
+            console.log(num);
+        }
+    }
+}
+
+showPrimes(10);
