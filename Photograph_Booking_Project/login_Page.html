@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="titleAndLink">
+            <h2>Sign in to your account</h2>
+            <div class="options">
+                <p class="or">or</p>
+                <a href="./register_Page.html"class="register"> create a new account</a>
+            </div>
+        </div>
+        <form action="POST" class="auth">
+            <div class="form-group">
+                <label for="email" class="email">Email Address</label>
+                <input type="email" name="" id="email" placeholder="please enter your email address" required>
+            </div>
+            <div class="form-group">                
+                <label for="password" class="password">Password</label>
+                <input type="password" id = "password" placeholder="please enter your password" required>
+            </div>
+
+            <button type="submit" class="signBtn">Sign in</button>
+        </form>
+    </div>
+</body>
+</html>

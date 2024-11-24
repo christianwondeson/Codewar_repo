@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --body-color:rgba(214, 205, 205, 0.377);
+    font-family: "Roboto", sans-serif;
+    --background_color:white;
+    --signInButton: black;
+    --link:royalblue;
+}
+body{
+background-color: var(--body-color);
+}
+.main-content{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content !important;
+    height: fit-content !important;
+    background-color: var(--background_color);
+    padding: 2em 1em;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.titleAndLink{
+    width: 410px;
+    margin-bottom: 2em;
+}
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0px 0px !important;
+    position: relative;
+    bottom: 1em;
+    height: 20px;
+
+}
+.options .or{
+    font-size: 20px;
+    font-weight:lighter;
+    color: grey;
+}
+.options .register{
+text-decoration: none !important;;
+color: var(--link);
+padding-left: .2em;
+}
+.auth{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 400px;
+    height: fit-content;
+    padding: .5em;
+    margin: .3em 0px;
+}
+
+.form-group .email, .password, .full-name{
+    color: var(--signInButton);
+    font-weight: bold;
+    padding: .3em;
+}
+.form-group input{
+    width: 400px;
+    height: 25px;
+    padding: .5em 3px;
+    font-size: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.238);
+    border-radius: 4px;
+}
+.signBtn{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .9em;
+    color: var(--background_color);
+    background-color: var(--signInButton);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: medium;
+    cursor: pointer;
+    margin-top: 1em;
+}
